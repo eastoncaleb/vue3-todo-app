@@ -83,4 +83,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
 
 .open-sans { font-family: 'Open Sans', sans-serif; }
 .poppins { font-family: 'Poppins', sans-serif; }
+
+.done { text-decoration: line-through; }
 </style>

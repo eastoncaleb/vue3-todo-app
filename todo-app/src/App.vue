@@ -37,7 +37,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
             const newTodo = ref('');
             const defaultData = [{
                 done: false,
-                content: 'Write a blog post'
+                content: 'Read about Vue'
             }]
             const todosData = JSON.parse(localStorage.getItem('todos')) || defaultData;
             const todos = ref(todosData);

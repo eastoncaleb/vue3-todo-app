@@ -1,5 +1,5 @@
 <template>
-<div class="container bg-white shadow rounded-3 m-5 p-5 mx-auto w-75">
+<div class="container bg-white shadow rounded-3 mt-5 mb-3 p-5 mx-auto w-75">
     <h1 class="fw-bold text-center fs-1 text-primary">todo <i class="fas fa-tasks"></i></h1>
     <form class="d-flex text-center bg-light p-4 rounded-3 align-items-center mt-3 mb-5 shadow-sm" @submit.prevent="addTodo()">
       <div class="input-group">
@@ -9,11 +9,11 @@
             autocomplete="off"
             class="flex-grow-1 form-control fs-4"
         >
-        <button class="btn btn-primary fs-4">add it</button>
+        <button class="btn btn-primary fs-4">add it <i class="fas fa-plus"></i></button>
       </div>
     </form>
     <h2 class="fw-bold text-end text-primary text-secondary">my <i class="fas fa-tasks"></i> list</h2>
-    <ul class="list-group fs-3">
+    <ul class="list-group list-group-flush fs-3">
         <li v-for="(todo, index) in todos" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
           <span :class="{ done: todo.done }" @click="doneTodo(todo)">
             {{ todo.content }}
@@ -23,6 +23,7 @@
     </ul>
     <h4 class="mt-2 mb-4 text-center text-secondary fw-bold bg-light p-3 rounded-3 shadow-sm" v-if="todos.length === 0">your todo list is empty.</h4>
 </div>
+<div id="copyright" class="text-center text-secondary">Copyright &copy; 2021</div>
 </template>
 
 <script>
